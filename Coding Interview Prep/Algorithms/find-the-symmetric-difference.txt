@@ -1,0 +1,33 @@
+function sym(...sets) {
+
+    function noDuplicated (array) {
+      let result = [];
+      array.map((item) => {
+        if (!result.includes(item)) {
+          result.push(item)
+        } 
+      })
+      return result
+    }
+
+  let newArray = [];
+
+  sets.map((item) => {
+    
+    noDuplicated(item).map((n) => {
+            
+      if (!newArray.includes(n)) {
+        newArray.push(n)
+      } else {
+        let index = newArray.findIndex((f) => {
+          return f === n
+        })
+        newArray.splice(index, 1)
+      }
+    })
+  })
+
+  return newArray
+}
+
+sym([1, 2, 3], [5, 2, 1, 4]);
