@@ -1,0 +1,13 @@
+function mixedNumbers(arr) {
+  // Only change code below this line
+  const strOne = ['I', 2, 'three'];
+  const strTwo = [7, 'VIII', 9];
+
+  arr.unshift(...strOne);
+  arr.push(...strTwo);
+
+  // Only change code above this line
+  return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
