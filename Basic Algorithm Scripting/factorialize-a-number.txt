@@ -1,0 +1,11 @@
+function factorialize(num) {
+  let fat = 1;
+
+  for (let i=num; i>0; i--) {
+    fat = fat*i;
+  }
+
+  return fat;
+}
+
+factorialize(5);
