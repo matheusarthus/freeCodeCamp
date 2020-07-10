@@ -1,0 +1,22 @@
+function titleCase(str) {
+  let splitedStr = str.split(' ');
+  let finalStr = ''
+
+  for (let i=0; i<splitedStr.length; i++) {
+    splitedStr[i] = splitedStr[i].toLowerCase()
+
+    splitedStr[i] = splitedStr[i].replace(/^\S/, splitedStr[i][0].toUpperCase());
+
+    finalStr = finalStr + splitedStr[i]
+
+    if (i<splitedStr.length-1) {
+      finalStr = finalStr + ' '
+    }
+  }
+
+  return finalStr;
+}
+//I'm A Little Tea Pot
+//I'm A Little Tea Pot
+
+titleCase("I'm a little tea pot");
