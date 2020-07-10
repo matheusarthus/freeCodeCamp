@@ -1,0 +1,7 @@
+function booWho(bool) {
+  const type = typeof(bool)
+
+  return type === 'boolean' ? true : false;
+}
+
+booWho(null)
