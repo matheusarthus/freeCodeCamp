@@ -1,0 +1,29 @@
+function chunkArrayInGroups(arr, size) {
+  let splicedArr = [];
+  let auxArr = [];
+  let j=0;
+
+  for (let i=0; i<arr.length; i++) {
+    auxArr.push(arr[i])
+    j += 1;
+
+    console.log(auxArr)
+
+    if (j == size) {
+      splicedArr.push(auxArr)
+      j = 0;
+      auxArr = [];
+    }
+  }
+
+  if (auxArr[0] != null) {
+    console.log('entrou')
+    splicedArr.push(auxArr)
+  }
+
+  console.log(splicedArr)
+
+  return splicedArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
